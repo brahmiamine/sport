@@ -1,0 +1,57 @@
+import type { Exercise, WorkoutTemplate } from './types'
+
+export const exercises: Exercise[] = [
+  { id:'leg-press', name:'Leg Press', category:'Musculation', equipment:'Machine', primary:['Quadriceps'], secondary:['Fessiers','Ischio-jambiers'], sets:3, reps:'8–12', rest:120, instructions:['Dos collé au dossier','Pieds largeur épaules','Descends de façon contrôlée','Pousse sans verrouiller les genoux'], tip:'Garde les genoux dans l’axe des pieds.', level:'Débutant', icon:'🦵' },
+  { id:'chest-press', name:'Chest Press', category:'Musculation', equipment:'Machine', primary:['Pectoraux'], secondary:['Épaules','Triceps'], sets:3, reps:'8–12', rest:120, instructions:['Poignées à hauteur de poitrine','Pieds au sol','Pousse devant toi','Contrôle le retour'], tip:'Ne décolle pas les épaules du dossier.', level:'Débutant', icon:'💪' },
+  { id:'lat-pulldown', name:'Lat Pulldown', category:'Musculation', equipment:'Machine', primary:['Dos'], secondary:['Biceps'], sets:3, reps:'8–12', rest:120, instructions:['Poitrine sortie','Tire la barre vers le haut de la poitrine','Coudes vers le bas','Remonte lentement'], tip:'Ne tire jamais derrière la nuque.', level:'Débutant', icon:'⬇️' },
+  { id:'seated-row', name:'Rowing assis', category:'Musculation', equipment:'Machine / poulie', primary:['Dos'], secondary:['Biceps'], sets:3, reps:'8–12', rest:105, instructions:['Dos droit','Poitrine ouverte','Tire vers le nombril','Resserre les omoplates'], tip:'Évite de te balancer avec le buste.', level:'Débutant', icon:'🚣' },
+  { id:'leg-curl', name:'Leg Curl', category:'Musculation', equipment:'Machine', primary:['Ischio-jambiers'], secondary:['Fessiers'], sets:3, reps:'10–15', rest:90, instructions:['Hanches stables','Ramène les talons','Serre l’arrière des cuisses','Retour lent'], tip:'Ne cambre pas pour finir la répétition.', level:'Débutant', icon:'🦿' },
+  { id:'shoulder-press', name:'Shoulder Press', category:'Musculation', equipment:'Machine', primary:['Épaules'], secondary:['Triceps'], sets:2, reps:'8–12', rest:90, instructions:['Assis droit','Poignées à hauteur d’épaules','Pousse vers le haut','Redescends sous contrôle'], tip:'Garde les côtes basses et évite de cambrer.', level:'Débutant', icon:'🏋️' },
+  { id:'ab-crunch', name:'Abdominal Crunch', category:'Musculation', equipment:'Machine', primary:['Abdominaux'], secondary:[], sets:2, reps:'10–15', rest:60, instructions:['Bas du dos calé','Enroule le tronc','Souffle en montant','Retour lent'], tip:'Pense à rapprocher les côtes du bassin.', level:'Débutant', icon:'🔥' },
+  { id:'back-extension', name:'Back Extension', category:'Musculation', equipment:'Machine / banc', primary:['Lombaires'], secondary:['Fessiers','Ischio-jambiers'], sets:2, reps:'10–15', rest:90, instructions:['Dos neutre','Descends avec contrôle','Remonte sans jeter la tête','Arrête-toi aligné'], tip:'Petit mouvement propre, pas d’hyperextension.', level:'Débutant', icon:'↗️' },
+  { id:'hip-abduction', name:'Hip Abduction', category:'Musculation', equipment:'Machine', primary:['Fessiers'], secondary:[], sets:2, reps:'12–15', rest:75, instructions:['Dos calé','Ouvre les genoux','Contrôle l’écartement','Retour lent'], tip:'Bonus : inutile de charger très lourd.', level:'Débutant', icon:'↔️' },
+  { id:'leg-extension', name:'Leg Extension', category:'Musculation', equipment:'Machine', primary:['Quadriceps'], secondary:[], sets:2, reps:'10–15', rest:75, instructions:['Genoux alignés avec l’axe de la machine','Monte sans donner d’élan','Contracte en haut','Retour lent'], tip:'Ne claque pas les genoux en extension.', level:'Débutant', icon:'🦵' },
+  { id:'pec-deck', name:'Pec Deck / Butterfly', category:'Musculation', equipment:'Machine', primary:['Pectoraux'], secondary:['Épaules'], sets:2, reps:'10–15', rest:75, instructions:['Poitrine haute','Coudes légèrement fléchis','Rapproche les bras','Retour contrôlé'], tip:'Garde les épaules basses.', level:'Débutant', icon:'🦋' },
+  { id:'biceps-curl', name:'Curl biceps', category:'Musculation', equipment:'Machine / haltères', primary:['Biceps'], secondary:[], sets:2, reps:'10–15', rest:60, instructions:['Coudes fixes','Monte sans élan','Serre en haut','Descends lentement'], tip:'Ne balance pas le dos.', level:'Débutant', icon:'💪' },
+  { id:'triceps-pushdown', name:'Extension triceps poulie', category:'Musculation', equipment:'Poulie', primary:['Triceps'], secondary:[], sets:2, reps:'10–15', rest:60, instructions:['Coudes collés au corps','Pousse vers le bas','Tends sans verrouiller brutalement','Retour contrôlé'], tip:'Le haut du bras reste immobile.', level:'Débutant', icon:'👇' },
+  { id:'hip-thrust', name:'Hip Thrust', category:'Musculation', equipment:'Machine / barre', primary:['Fessiers'], secondary:['Ischio-jambiers'], sets:3, reps:'8–12', rest:120, instructions:['Pieds stables','Mentons légèrement rentré','Monte les hanches','Serre les fessiers en haut'], tip:'Ne termine pas en hyperextension lombaire.', level:'Débutant', icon:'🍑' },
+  { id:'goblet-squat', name:'Goblet Squat', category:'Musculation', equipment:'Haltère', primary:['Quadriceps'], secondary:['Fessiers','Abdominaux'], sets:3, reps:'8–12', rest:120, instructions:['Haltère contre la poitrine','Pieds stables','Descends entre les hanches','Remonte en poussant le sol'], tip:'Commence léger pour apprendre la profondeur.', level:'Débutant', icon:'🏋️' },
+  { id:'rdl', name:'Soulevé de terre roumain', category:'Musculation', equipment:'Haltères', primary:['Ischio-jambiers'], secondary:['Fessiers','Lombaires'], sets:3, reps:'8–10', rest:120, instructions:['Genoux légèrement fléchis','Hanches en arrière','Dos neutre','Remonte en serrant les fessiers'], tip:'Tu dois sentir l’étirement derrière les cuisses.', level:'Intermédiaire', icon:'🏋️' },
+  { id:'plank', name:'Planche', category:'Musculation', equipment:'Poids du corps', primary:['Abdominaux'], secondary:['Épaules','Fessiers'], sets:2, reps:'30–45 s', rest:60, duration:40, instructions:['Coudes sous les épaules','Corps gainé','Fesses ni hautes ni basses','Respire calmement'], tip:'Arrête dès que le bassin s’affaisse.', level:'Débutant', icon:'🧱' },
+  { id:'dead-bug', name:'Dead Bug', category:'Mobilité', equipment:'Tapis', primary:['Abdominaux'], secondary:[], sets:2, reps:'8–12 / côté', rest:45, instructions:['Dos plaqué au sol','Bras et jambe opposés','Allonge lentement','Reviens sans cambrer'], tip:'La qualité compte plus que l’amplitude.', level:'Débutant', icon:'🪲' },
+  { id:'walk-incline', name:'Marche inclinée', category:'Cardio', equipment:'Tapis', primary:['Corps entier'], secondary:['Mollets','Fessiers'], sets:1, reps:'', rest:0, duration:900, instructions:['Allure confortable','Inclinaison modérée','Tiens-toi droit','Respire régulièrement'], tip:'Tu dois pouvoir parler en phrases.', level:'Débutant', icon:'🚶' },
+  { id:'bike', name:'Vélo', category:'Cardio', equipment:'Vélo', primary:['Quadriceps'], secondary:['Mollets','Fessiers'], sets:1, reps:'', rest:0, duration:1200, instructions:['Résistance facile à modérée','Cadence régulière','Épaules relâchées','Respiration contrôlée'], tip:'Excellent pour récupérer sans impact.', level:'Débutant', icon:'🚴' },
+  { id:'rower', name:'Rameur', category:'Cardio', equipment:'Rameur', primary:['Corps entier'], secondary:['Dos','Quadriceps'], sets:1, reps:'', rest:0, duration:900, instructions:['Pousse d’abord avec les jambes','Puis ouvre les hanches','Tire ensuite avec les bras','Retour dans l’ordre inverse'], tip:'Technique avant cadence.', level:'Débutant', icon:'🚣' },
+  { id:'elliptical', name:'Elliptique', category:'Cardio', equipment:'Elliptique', primary:['Corps entier'], secondary:['Quadriceps','Fessiers'], sets:1, reps:'', rest:0, duration:1200, instructions:['Cadence régulière','Garde le buste droit','Pousse et tire avec les bras','Résistance modérée'], tip:'Très bon choix si les articulations sont sensibles.', level:'Débutant', icon:'🏃' },
+  { id:'hiit-bike', name:'HIIT vélo 30/90', category:'HIIT', equipment:'Vélo', primary:['Corps entier'], secondary:['Quadriceps'], sets:6, reps:'30 s fort / 90 s facile', rest:90, duration:720, instructions:['Échauffe-toi 5 min avant','30 s rapide','90 s très facile','Répète 6 fois'], tip:'Pas nécessaire au début si tu es courbaturé.', level:'Intermédiaire', icon:'⚡' },
+  { id:'mountain-climber', name:'Mountain Climbers', category:'HIIT', equipment:'Poids du corps', primary:['Abdominaux'], secondary:['Épaules','Quadriceps'], sets:4, reps:'30 s', rest:30, duration:240, instructions:['Position de planche','Genou vers poitrine','Alterne rapidement','Garde le bassin stable'], tip:'Réduis la vitesse avant de perdre la forme.', level:'Intermédiaire', icon:'⛰️' },
+  { id:'jumping-jacks', name:'Jumping Jacks', category:'HIIT', equipment:'Poids du corps', primary:['Corps entier'], secondary:['Mollets','Épaules'], sets:4, reps:'40 s', rest:20, duration:240, instructions:['Saute pieds écartés','Bras au-dessus de la tête','Retour pieds joints','Atterrissage souple'], tip:'Version sans saut si besoin.', level:'Débutant', icon:'⭐' },
+  { id:'mobility-hips', name:'Mobilité hanches', category:'Mobilité', equipment:'Tapis', primary:['Fessiers'], secondary:['Lombaires'], sets:2, reps:'45 s / côté', rest:20, duration:180, instructions:['Amplitude confortable','Respire lentement','Aucun mouvement forcé','Change de côté'], tip:'Idéal en récupération active.', level:'Débutant', icon:'🧘' },
+  { id:'mobility-shoulders', name:'Mobilité épaules', category:'Mobilité', equipment:'Sans matériel', primary:['Épaules'], secondary:['Dos'], sets:2, reps:'45 s', rest:20, duration:180, instructions:['Cercles lents','Petite puis grande amplitude','Sans douleur','Respire calmement'], tip:'Ne force jamais une articulation douloureuse.', level:'Débutant', icon:'🙆' },
+  { id:'stretch-hamstrings', name:'Étirement ischio-jambiers', category:'Mobilité', equipment:'Tapis', primary:['Ischio-jambiers'], secondary:[], sets:2, reps:'20–30 s / côté', rest:15, duration:120, instructions:['Jambe tendue sans verrouiller','Dos long','Incline-toi doucement','Respire'], tip:'Étirement léger, jamais douloureux.', level:'Débutant', icon:'🧘' }
+]
+
+export const templates: WorkoutTemplate[] = [
+  { id:'a', name:'Full Body A', color:'#59e7a3', items:[
+    {exerciseId:'leg-press',sets:3,reps:'8–12',rest:120},
+    {exerciseId:'chest-press',sets:3,reps:'8–12',rest:120},
+    {exerciseId:'lat-pulldown',sets:3,reps:'8–12',rest:120},
+    {exerciseId:'seated-row',sets:3,reps:'8–12',rest:105},
+    {exerciseId:'back-extension',sets:2,reps:'10–15',rest:90},
+    {exerciseId:'ab-crunch',sets:2,reps:'10–15',rest:60}
+  ]},
+  { id:'b', name:'Full Body B', color:'#6ea8fe', items:[
+    {exerciseId:'leg-press',sets:3,reps:'10–12',rest:120},
+    {exerciseId:'lat-pulldown',sets:3,reps:'8–12',rest:120},
+    {exerciseId:'chest-press',sets:3,reps:'8–12',rest:120},
+    {exerciseId:'leg-curl',sets:3,reps:'10–15',rest:90},
+    {exerciseId:'shoulder-press',sets:2,reps:'8–12',rest:90},
+    {exerciseId:'hip-abduction',sets:2,reps:'12–15',rest:75}
+  ]},
+  { id:'c', name:'Récupération C', color:'#f5c451', items:[
+    {exerciseId:'walk-incline',duration:1800},
+    {exerciseId:'mobility-hips',duration:180},
+    {exerciseId:'mobility-shoulders',duration:180},
+    {exerciseId:'stretch-hamstrings',duration:120}
+  ]}
+]
